@@ -116,3 +116,10 @@ CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --filename_test_results ../domlin_fever/fever_data/RTE_dev_set_predicted.tsv
 ```
 
+
+### Questions
+
+If anything should not work or is unclear, please don't hesitate to contact the authors
+
+* Dominik Stammbach (dominik.stammbach@bluewin.ch)
+
