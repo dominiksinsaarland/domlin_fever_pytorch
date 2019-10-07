@@ -64,7 +64,7 @@ CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --learning_rate 2e-5 \
     --num_train_epochs 2 \
     --output_dir ../pytorch_fever_models/$TASK_NAME \
-    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt 
+    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt \
     --prediction_file sentence_retrieval_1_dev_set.tsv \
     --filename_test_results ../domlin_fever/fever_data/dev_set_sentences_predicted_part_1_pytorch.tsv
 
@@ -88,7 +88,7 @@ CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --learning_rate 2e-5 \
     --num_train_epochs 2 \
     --output_dir ../pytorch_fever_models/$TASK_NAME \
-    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt 
+    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt \
     --prediction_file sentence_retrieval_2_dev_set.tsv \
     --filename_test_results ../domlin_fever/fever_data/dev_set_sentences_predicted_part_2_pytorch.tsv
 ```
@@ -111,7 +111,7 @@ CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --learning_rate 3e-5 \
     --num_train_epochs 3 \
     --output_dir ../pytorch_fever_models/$TASK_NAME \
-    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt 
+    --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt \
     --prediction_file RTE_dev_set.py \
     --filename_test_results ../domlin_fever/fever_data/RTE_dev_set_predicted.tsv
 ```
