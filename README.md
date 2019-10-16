@@ -50,7 +50,7 @@ etc. with the pytorch equivalent
 ```bash 
 mkdir ../pytorch_fever_models
 TASK_NAME="first_sentence_retrieval"
-
+filename_test_results="../domlin_fever/fever_data/dev_set_sentences_predicted_part_1_pytorch.tsv"
 CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --model_type bert \
     --model_name_or_path bert-base-cased \
@@ -66,8 +66,10 @@ CUDA_VISIBLE_DEVICES=2 python run_fever.py \
     --output_dir ../pytorch_fever_models/$TASK_NAME \
     --vocab_file ../bert/bert/cased_L-12_H-768_A-12/vocab.txt \
     --prediction_file sentence_retrieval_1_dev_set.tsv \
-    --filename_test_results ../domlin_fever/fever_data/dev_set_sentences_predicted_part_1_pytorch.tsv
+    --filename_test_results=$filename_test_results
 
+# pytorch transformers by default generates outfiles with at least two columns, we need only the first one
+cut -f1 $filename_test_results
 ```
 
 
